@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap');
+body {
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 15px;
+    background: rgb(23, 1, 41);
+    background: linear-gradient(103deg, rgb(17, 0, 31) 0%, rgb(41, 0, 21) 50%, rgb(1, 0, 41) 100%);
+}
+
+
+/*HEADER BÖLÜMÜ*/
+
+header {
+    padding: 8px 0;
+    background: rgb(23, 1, 41);
+    background: linear-gradient(103deg, rgb(17, 0, 31) 0%, rgb(41, 0, 21) 50%, rgb(1, 0, 41) 100%);
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    color: lightgray !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+    color: rgb(255, 0, 0) !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 1rem);
+        height: 3px;
+        background-color: #ff7300;
+        bottom: -6px;
+        left: 0.45rem;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    .navbar-nav .nav-link:hover::after {
+        opacity: 1;
+    }
+    .navbar-nav .nav-link.active::after {
+        background-color: red;
+        opacity: 1;
+    }
+}
+
+.navbar-nav .nav-item::after {
+    color: orange;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 11.5px;
+    word-spacing: 40px;
+    position: relative;
+    color: lightgray !important;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    color: gold !important;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.045);
+    transition: ease-in-out all 0.3s;
+    font-size: 26px;
+    color: gold !important;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px;
+}
+
+span {
+    color: red;
+}
+
+span2 {
+    color: gold;
+}
+
+span3 {
+    color: green;
+}
+
+
+/*SLİDER BÖLÜMÜ*/
+
+.button-1,
+.button-2 {
+    background-color: #a00000;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 7px 8px 8px 7px;
+}
+
+.button-1 {
+    background-color: rgb(58, 11, 106);
+    color: whitesmoke;
+}
+
+.button-1:hover {
+    background-color: #a50048;
+    color: white;
+}
+
+.button-2 {
+    background-color: rgb(226, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.button-2:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.slider h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 50px;
+    color: gold !important;
+    letter-spacing: 10px;
+}
+
+.slider p {
+    padding: 20px 0;
+    color: rgb(0, 225, 233) !important;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1.9px;
+}
+
+.slider .slider-item {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    height: 440px;
+    background-image: url(./images/benett-casama-snoot-x.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: lightcyan;
+}
+
+
+/*GENEL CSS TANIMLAMALAR*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.section-title {
+    font-family: 'Tomorrow', sans-serif;
+}
+
+img {
+    height: 250px;
+}
+
+.hakkımızda {
+    width: 100%;
+    align-items: center;
+    background: url(images/4910984.gif);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    height: 550px;
+    color: yellow;
+}
+
+.hakkımızda p {
+    color: gold;
+}
+
+.hakkımızda h4 {
+    text-align: center;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.baslik {
+    width: 100%;
+    font-size: 55px;
+    text-align: center;
+    color: orangered !important;
+    letter-spacing: 8px;
+}
+
+.yazi {
+    padding: 55px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+
+.button-5 {
+    background-color: #a00000;
+    border: none;
+    color: rgb(0, 0, 0);
+    letter-spacing: 6px;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 7px 8px 8px 7px;
+}
+
+.button-5 {
+    background-color: rgb(77, 0, 87);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding: 20px 5px;
+    color: gold;
+    margin-top: 30px;
+}
+
+.button-5:hover {
+    box-shadow: 0px 15px 20px rgba(255, 0, 98, 0.268);
+    letter-spacing: 14px0;
+    background-color: #a50048;
+    color: rgb(0, 0, 0);
+    transform: scale(1.055);
+    transition: ease-in-out all 0.4s;
+}
+
+.footerr {
+    margin-top: 100px;
+    background: rgb(23, 1, 41);
+    background: linear-gradient(103deg, rgb(17, 0, 31) 0%, rgb(41, 0, 21) 50%, rgb(1, 0, 41) 100%);
+}
+
+.footerr h4 {
+    color: orange;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 7px;
+    text-align: left;
+}
+
+.footerr .list-unstyled {
+    color: gold;
+    padding: 30px 0;
+}
+
+.footerr .list-unstyled li {
+    padding: 15px 0;
+}
+
+.footerr .list-unstyled a {
+    text-decoration: none;
+    color: orange;
+}
+
+.footerr h5 {
+    color: orangered;
+    padding: 15px 0;
+}
+
+.footerr .list-unstyled {
+    padding: 25px 0;
+}
+
+.footerr .list-inline {
+    padding: 25px 0;
+}
+
+.footerr .list-inline li {
+    padding: 5px 0;
+}
+
+.footerr .list-inline li a {
+    text-decoration: none !important;
+    color: orange;
+    padding: 5px 0;
+}
+
+.footerr img {
+    width: 180px;
+    height: 115px;
+}
+
+.footerr .list-inline a {
+    margin-bottom: 5px;
+    display: flex;
+    font-size: 14px;
+    color: gold;
+}
+
+.footerr .list-inline i-1 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: orangered;
+}
+
+.footerr .list-inline i-2 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: rgb(30, 90, 255);
+}
+
+.footerr .list-inline i-3 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: red;
+}
+
+.footerr .list-inline i-4 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: rgb(23, 23, 255);
+}
+
+.footerr .list-inline i-1:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline i-2:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline i-3:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline i-4:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline a:hover {
+    color: white;
+}
+
+.footerr .list-unstyled a:hover {
+    color: white;
+}
+
+.footerr .footer-alt {
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    padding: 20px 0;
+    border-top: 1px solid;
+    color: whitesmoke;
+}
+
+
+/*oyunlar kategori*/
+
+.oyunlar {
+    font-weight: 600;
+    letter-spacing: 8px;
+    padding: 20px;
+    text-align: center;
+    color: gold;
+    font-size: 48px;
+}
+
+.section-title {
+    margin-top: 50px;
+    letter-spacing: 2px;
+    font-size: 32px;
+    padding: 20px 0px;
+    color: gold;
+}
+
+.hero-container {
+    padding: 20px 0;
+    margin: auto;
+    display: flex;
+}
+
+.hero-container:hover {
+    box-shadow: 0px 0px 10px 10px 0.4s rgba(72, 0, 75, 0.166);
+}
+
+.hero-container {
+    color: rgb(84, 0, 84);
+    letter-spacing: 1.5px;
+}
+
+.main-container {
+    width: 270px;
+    height: 540px;
+    position: relative;
+    margin: 0 15px;
+}
+
+.poster-container img {
+    border-radius: 15px;
+    width: 290px;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 9999;
+}
+
+.poster-container img:hover {
+    transition: ease-out all 0.4s;
+    width: 305px;
+    height: 305px;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    z-index: 9999;
+}
+
+.poster {
+    width: 400px;
+    height: 420px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+.ticket-container {
+    background: rgb(224, 186, 255);
+    background: linear-gradient(103deg, rgb(142, 252, 188) 0%, rgb(253, 172, 214) 50%, rgb(178, 176, 255) 100%);
+    width: 320px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.main-container:hover .ticket-container {
+    opacity: 1;
+    animation: bounceIn 0.6s linear;
+}
+
+@keyframes bounceIn {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.01, 1.01, 1.01);
+        transform: scale3d(1.01, 1.01, 1.01);
+    }
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.ticket__content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.ticket__movie-title {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.ticket__current-price {
+    letter-spacing: 1px;
+    color: #008c25;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.ticket__buy-btn {
+    background-image: linear-gradient(to right, #ff2d7e 0%, #fd5ba7 51%, #c400ca 100%)
+}
+
+.ticket__buy-btn {
+    width: 320px;
+    margin-right: 20px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px rgba(238, 238, 238, 0.13);
+    display: block;
+    border: none;
+}
+
+.ticket__buy-btn:hover {
+    border-radius: 10px;
+    transform: scale(1.06);
+    transition: ease-in all 0.35s;
+    background-position: center;
+    color: rgb(0, 0, 0);
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+.card {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    width: 270px;
+    height: 360px;
+}
+
+.markalar-1 .card-body {
+    text-align: center;
+    color: orangered;
+}
+
+.markalar-1 a.card {
+    background-color: rgb(55, 0, 37);
+}
+
+.markalar-1 a.card:hover {
+    z-index: 999;
+    transform: scale(1.19);
+    background: linear-gradient(90deg, rgb(23, 0, 41) 0%, rgb(38, 0, 19) 50%, rgb(18, 0, 46) 100%);
+    box-shadow: 2px 0px 20px rgba(182, 0, 106, 0.397);
+    transition: all 0.4s ease;
+}
+
+.card {
+    text-decoration: none;
+}
+
+.card-title h4 {
+    letter-spacing: 1px;
+    color: gold;
+    text-decoration: none !important;
+    font-size: 21px;
+    margin-top: 65px;
+}
+
+.card-icon img {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.card-icon-1 img {
+    text-align: center;
+    width: 170px;
+    height: 200px;
+    position: relative;
+}

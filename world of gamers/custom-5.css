@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap');
+body {
+    font-family: 'Tomorrow', sans-serif;
+    font-size: 15px;
+    background: rgb(23, 1, 41);
+    background: linear-gradient(103deg, rgb(17, 0, 31) 0%, rgb(41, 0, 21) 50%, rgb(1, 0, 41) 100%);
+}
+
+
+/*HEADER BÖLÜMÜ*/
+
+header {
+    padding: 8px 0;
+    background: rgb(23, 1, 41);
+    background: linear-gradient(103deg, rgb(17, 0, 31) 0%, rgb(41, 0, 21) 50%, rgb(1, 0, 41) 100%);
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    color: lightgray !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+    color: rgb(255, 0, 0) !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 1rem);
+        height: 3px;
+        background-color: #ff7300;
+        bottom: -6px;
+        left: 0.45rem;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    .navbar-nav .nav-link:hover::after {
+        opacity: 1;
+    }
+    .navbar-nav .nav-link.active::after {
+        background-color: red;
+        opacity: 1;
+    }
+}
+
+.navbar-nav .nav-item::after {
+    color: orange;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 11.5px;
+    word-spacing: 40px;
+    position: relative;
+    color: lightgray !important;
+}
+
+.navbar-brand {
+    font-size: 26px;
+    color: gold !important;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.045);
+    transition: ease-in-out all 0.3s;
+    font-size: 26px;
+    color: gold !important;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px;
+}
+
+span {
+    color: red;
+}
+
+span2 {
+    color: gold;
+}
+
+span3 {
+    color: green;
+}
+
+
+/*SLİDER BÖLÜMÜ*/
+
+.button-1,
+.button-2 {
+    background-color: #a00000;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 7px 8px 8px 7px;
+}
+
+.button-1 {
+    background-color: rgb(58, 11, 106);
+    color: whitesmoke;
+}
+
+.button-1:hover {
+    background-color: #a50048;
+    color: white;
+}
+
+.button-2 {
+    background-color: rgb(226, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.button-2:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.slider h2 {
+    color: gold !important;
+    text-align: center;
+    font-weight: 400;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.slider p {
+    padding: 20px 0;
+    color: rgb(0, 225, 233) !important;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1.9px;
+}
+
+.slider .slider-item {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    height: 440px;
+    background-image: url(./images/benett-casama-snoot-x.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: lightcyan;
+}
+
+
+/*GENEL CSS TANIMLAMALAR*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.section-title {
+    font-family: 'Tomorrow', sans-serif;
+}
+
+img {
+    height: 250px;
+}
+
+.baslik {
+    width: 100%;
+    font-size: 55px;
+    text-align: center;
+    color: rgb(255, 105, 155) !important;
+    letter-spacing: 8px;
+}
+
+.yazi {
+    padding: 55px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+
+.button-5 {
+    background-color: #a00000;
+    border: none;
+    color: rgb(0, 0, 0);
+    letter-spacing: 6px;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 7px 8px 8px 7px;
+}
+
+.button-5 {
+    background-color: rgb(77, 0, 87);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding: 20px 5px;
+    color: gold;
+    margin-top: 30px;
+}
+
+.button-5:hover {
+    box-shadow: 0px 15px 15px rgba(0, 143, 36, 0.055);
+    letter-spacing: 14px;
+    background-color: #a50048;
+    color: rgb(0, 0, 0);
+    transform: scale(1.055);
+    transition: ease-in-out all 0.4s;
+}
+
+#contact {
+    width: 100%;
+    height: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    color: gold;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+
+/* Left contact page */
+
+.form-horizontal {
+    max-width: 350px;
+    font-weight: 400;
+}
+
+.form-control,
+textarea {
+    border: none;
+    margin-top: 10px;
+    max-width: 100%;
+    background-color: rgb(45, 0, 56);
+    color: rgb(255, 255, 254);
+    letter-spacing: 1px;
+}
+
+.send-button {
+    border: none;
+    box-shadow: rgba(56, 0, 56, 0.371);
+    border-radius: 5px;
+    display: flex;
+    background-image: linear-gradient(to right, #5c0023 0%, #4f0025 51%, #420044 100%);
+    margin-top: 25px;
+    height: 40px;
+    width: 310px;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.send-text {
+    color: rgb(232, 232, 232);
+    transition: 0.5s;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.alt-send-button:hover {
+    transform: translate3d(0px, -3px, 0px);
+    letter-spacing: 4px;
+}
+
+
+/* Begin Right Contact Page */
+
+.direct-contact-container {
+    max-width: 400px;
+}
+
+
+/* Location, Phone, Email Section */
+
+.contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.contact-list li a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+
+.contact-list li a:hover {
+    color: orange;
+    transition: ease-in all 0.2s;
+}
+
+.list-item {
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.list-item i {
+    color: gold;
+}
+
+.contact-text {
+    letter-spacing: 1.9px;
+    color: #bbb;
+}
+
+.place {
+    margin-left: 62px;
+}
+
+.phone {
+    margin-left: 56px;
+}
+
+.gmail {
+    margin-left: 53px;
+}
+
+.contact-text a {
+    color: yellow;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+    color: rgb(255, 255, 19);
+    text-decoration: none;
+}
+
+
+/* Social Media Icons */
+
+.social-media-list {
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: -40px;
+    padding: 0;
+}
+
+.social-media-list li a-1 {
+    color: rgb(0, 68, 255);
+}
+
+.social-media-list li a-2 {
+    color: rgb(45, 101, 255);
+}
+
+.social-media-list li a-3 {
+    color: rgb(255, 0, 128);
+}
+
+.social-media-list li a-4 {
+    color: rgb(255, 0, 0);
+}
+
+.social-media-list li {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(82, 0, 45);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1.4px gold;
+    transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+    background-color: rgb(252, 255, 203);
+}
+
+.social-media-list li:hover:after {
+    opacity: 1;
+    transform: scale(1.13);
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+    color: rgb(244, 255, 143);
+}
+
+hr {
+    border-top: 1px solid;
+    border-color: rgba(255, 255, 255, 0.186);
+}
+
+@media screen and (max-width: 850px) {
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .direct-contact-container,
+    .form-horizontal {
+        margin: 0 auto;
+    }
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 300px;
+    }
+    .social-media-list li {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+    .social-media-list li:after {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .direct-contact-container,
+    .form-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+    .form-control,
+    textarea {
+        margin: 0 auto;
+    }
+    .name,
+    .email,
+    textarea {
+        width: 280px;
+    }
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 280px;
+    }
+    .social-media-list {
+        left: 0;
+    }
+    .social-media-list li {
+        height: 55px;
+        width: 55px;
+        line-height: 55px;
+        font-size: 2rem;
+    }
+    .social-media-list li:after {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .send-button {
+        width: 99%;
+    }
+}
+
+.footerr {
+    margin-top: 100px;
+    background: rgb(23, 1, 41);
+    background: linear-gradient(103deg, rgb(17, 0, 31) 0%, rgb(41, 0, 21) 50%, rgb(1, 0, 41) 100%);
+}
+
+.footerr h4 {
+    color: orange;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 7px;
+    text-align: left;
+}
+
+.footerr .list-unstyled {
+    color: gold;
+    padding: 30px 0;
+}
+
+.footerr .list-unstyled li {
+    padding: 15px 0;
+}
+
+.footerr .list-unstyled a {
+    text-decoration: none;
+    color: orange;
+}
+
+.footerr h5 {
+    color: orangered;
+    padding: 15px 0;
+}
+
+.footerr .list-unstyled {
+    padding: 25px 0;
+}
+
+.footerr .list-inline {
+    padding: 25px 0;
+}
+
+.footerr .list-inline li {
+    padding: 5px 0;
+}
+
+.footerr .list-inline li a {
+    text-decoration: none;
+    color: orange;
+    padding: 5px 0;
+}
+
+.footerr img {
+    width: 180px;
+    height: 115px;
+}
+
+.footerr .list-inline a {
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: flex;
+    font-size: 14px;
+    color: gold;
+}
+
+.footerr .list-inline i-1 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: orangered;
+}
+
+.footerr .list-inline i-2 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: rgb(30, 90, 255);
+}
+
+.footerr .list-inline i-3 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: red;
+}
+
+.footerr .list-inline i-4 {
+    margin-left: 10px;
+    display: flex;
+    font-size: 28px;
+    color: rgb(23, 23, 255);
+}
+
+.footerr .list-inline i-1:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline i-2:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline i-3:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline i-4:hover {
+    margin-left: 5px;
+    display: flex;
+    transform: scale(1.050);
+    transition: ease-in all 0.3s;
+    font-size: 28px;
+    color: rgb(255, 135, 135)
+}
+
+.footerr .list-inline a:hover {
+    color: white;
+}
+
+.footerr .list-unstyled a:hover {
+    color: white;
+}
+
+.footerr .footer-alt {
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    padding: 20px 0;
+    border-top: 1px solid;
+    color: whitesmoke;
+}
