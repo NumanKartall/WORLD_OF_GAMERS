@@ -1,1 +1,1 @@
-## <h3 align=center>WORLD OF GAMERS</h3>
+## <h2 align=center>WORLD OF GAMERS</h2>
